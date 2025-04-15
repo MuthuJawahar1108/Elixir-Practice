@@ -1,0 +1,10 @@
+<h1>Products</h1>
+<p>Welcome to the products page!</p>
+
+<p :if={@promo}>You have the promo code!</p>
+
+<a href={~p"/?#{[console: "xbox", promo: "secret-code"]}"}>Go back to home</a>
+
+<%!-- <p>This is the full URL: <%= url(~p"/products") %></p> --%>
+
+<.product :for={product <- @products} product={product} />
